@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'ru.yuanchik.example.onlineshop'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "ru.yuanchik.example.onlineshop"
@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -37,4 +40,6 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+    implementation libs.github.glide
+    implementation libs.google.gson
 }
