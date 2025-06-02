@@ -2,8 +2,8 @@ package ru.yuanchik.example.onlineshop.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -14,6 +14,7 @@ import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
 
 import java.util.ArrayList;
 
+import ru.yuanchik.example.onlineshop.activity.DetailActivity;
 import ru.yuanchik.example.onlineshop.databinding.ViewholderPupListBinding;
 import ru.yuanchik.example.onlineshop.domain.PopularDomain;
 
@@ -38,22 +39,21 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.viewhold
     @Override
     public void onBindViewHolder(@NonNull PopularAdapter.viewholder holder, int position) {
         binding.titleTxt.setText(items.get(position).getTitle());
-        binding.feeTxt.setText("$"+items.get(position).getPrice());
-        binding.scoreTxt.setText(""+items.get(position).getScore());
-
-        int drawableResourced=holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl(),
-                "drawable",holder.itemView.getContext().getPackageName());
+        binding.feeTxt.setText("$" + items.get(position).getPrice());
+        binding.scoreTxt.setText("" + items.get(position).getScore());
+        binding.reviewTxt.setText("" + items.get(position).getReview());
+        int drawableResourced = holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl(),
+                "drawable", holder.itemView.getContext().getPackageName());
 
         Glide.with(context)
                 .load(drawableResourced)
-                .transform(new GranularRoundedCorners(30,30,0,0))
+                .transform(new GranularRoundedCorners(30, 30, 0, 0))
                 .into(binding.pic);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra("object", items.get(position));
+            context.startActivity(intent);
         });
     }
 

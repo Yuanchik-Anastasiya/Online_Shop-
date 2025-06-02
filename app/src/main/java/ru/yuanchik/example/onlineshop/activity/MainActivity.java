@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
 import java.util.ArrayList;
-
 import ru.yuanchik.example.onlineshop.R;
 import ru.yuanchik.example.onlineshop.adapter.PopularAdapter;
 import ru.yuanchik.example.onlineshop.databinding.ActivityMainBinding;
@@ -64,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         items.add(new PopularDomain("T-shirt black","item_1",15,4,500,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
                 "Its cutting-edge monitor technology brings every scene to life with striking clarity and rich colors.\n" +
                 "With seamless integration and a sleek, modern design, the monitor Pro is not just a monitor, but a centerpiece for your entertainment space."));
-        items.add(new PopularDomain("Smart Watch","item_2",10,4.5,450,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
+        items.add(new PopularDomain("Smart Watch","item_1",10,4.5,450,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
                 "Its cutting-edge monitor technology brings every scene to life with striking clarity and rich colors.\n" +
                 "With seamless integration and a sleek, modern design, the monitor Pro is not just a monitor, but a centerpiece for your entertainment space."));
         items.add(new PopularDomain("Phone","item_3",3,4.9,800,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
