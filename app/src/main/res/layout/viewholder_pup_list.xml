@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/item_1" />
+        app:srcCompat="@drawable/item_0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="55dp"

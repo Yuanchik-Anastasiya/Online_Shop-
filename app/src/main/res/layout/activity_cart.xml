@@ -8,7 +8,7 @@
     tools:context=".activity.CartActivity">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/emptyTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Cart Is empty"
@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -44,13 +45,13 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
                     android:layout_gravity="center"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="My Cart"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:text="My Cart" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -62,12 +63,12 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:text="Order Summary"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="18sp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"/>
+                android:textStyle="bold" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -176,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:text="-"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/textView19"
@@ -300,14 +302,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button2"
+                style="@style/Base.Theme.OnlineShop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Base.Theme.OnlineShop"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/btn_background"
+                android:text="OrderNow"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="OrderNow" />
+                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>

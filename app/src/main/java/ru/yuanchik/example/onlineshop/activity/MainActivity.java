@@ -1,7 +1,9 @@
 package ru.yuanchik.example.onlineshop.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
@@ -49,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
         statusBarColor();
         initRecyclerView();
+        bottomNavigation();
+    }
+
+    private void bottomNavigation() {
+        binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,CartActivity.class)));
     }
 
     private void statusBarColor() {
@@ -58,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         ArrayList<PopularDomain> items = new ArrayList<>();
-        items.add(new PopularDomain("T-shirt black","item_1",15,4,500,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
+        items.add(new PopularDomain("T-shirt black","item_0",15,4,500,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
                 "Its cutting-edge monitor technology brings every scene to life with striking clarity and rich colors.\n" +
                 "With seamless integration and a sleek, modern design, the monitor Pro is not just a monitor, but a centerpiece for your entertainment space."));
         items.add(new PopularDomain("Smart Watch","item_1",10,4.5,450,"Immerse yourself in a world of vibrant visuals and immersive sound with the monitor.\n" +
